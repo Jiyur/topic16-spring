@@ -22,8 +22,6 @@ public class Catalog implements Serializable {
 
     @Type(type="text")
     private String catalog_name;
-    @Type(type="text")
-    private String catalog_image;
 
 
 
