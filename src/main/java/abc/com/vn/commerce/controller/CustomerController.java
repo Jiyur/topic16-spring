@@ -28,6 +28,9 @@ public class CustomerController {
             if (e.toString().contains("email_unique")){
                 model.addAttribute("errorMessage","Email taken");
             }
+            else{
+                model.addAttribute("errorMessage","Error !");
+            }
         }
         return "index";
     }
