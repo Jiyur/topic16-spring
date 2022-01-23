@@ -3,20 +3,32 @@ package abc.com.vn.commerce.controller;
 import abc.com.vn.commerce.model.Customer;
 import abc.com.vn.commerce.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class CustomerController {
+    @Value("${error.message}")
+    private String errorMessage;
+
     @Autowired
     CustomerService customerDAO;
 
     @GetMapping(value = "/save")
-    public String saveCustomer(){
+    public String saveCustomer(Model model){
         Customer customer=new Customer();
         customer.setEmail("vcatanh@gmail.com");
+        try{
+            customerDAO.saveCustomer(customer);
 
-        customerDAO.saveCustomer(customer);
+        }
+        catch (Exception e){
+            if (e.toString().contains("email_unique")){
+                model.addAttribute("errorMessage","Email taken");
+            }
+        }
         return "index";
     }
 }

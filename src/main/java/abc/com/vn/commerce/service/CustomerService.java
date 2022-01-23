@@ -3,6 +3,7 @@ package abc.com.vn.commerce.service;
 import abc.com.vn.commerce.model.Customer;
 import abc.com.vn.commerce.repository.CustomerRepository;
 import org.hibernate.HibernateException;
+import org.hibernate.exception.ConstraintViolationException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,14 +19,7 @@ public class CustomerService{
     CustomerRepository repo;
 
     public void saveCustomer(Customer customer) {
-        try{
-            repo.save(customer);
-
-        }
-        catch (HibernateException e){
-            if(e.toString().contains("email_uniq"))
-                System.out.println("Email đã sử dụng");
-        }
+        repo.save(customer);
     }
     public List<Customer> listAllCustomer() {
         return repo.findAll();
@@ -39,5 +33,6 @@ public class CustomerService{
         repo.deleteById(id);
     }
     public Optional<Customer> emailCheck(String email) {return repo.findCustomerByEmail(email);};
+
 
 }

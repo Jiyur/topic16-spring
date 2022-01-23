@@ -14,6 +14,7 @@ import java.util.UUID;
 @NoArgsConstructor
 @Getter
 @Setter
+@Table(uniqueConstraints = @UniqueConstraint(columnNames = "email",name = "email_unique"))
 public class Customer {
     @Id
     @Column(name = "customer_id" ,updatable = false,nullable = false)
@@ -32,7 +33,6 @@ public class Customer {
     @Column
     private String fullName;
 
-    @Column(unique = true)
     private String email;
 
     @Column
