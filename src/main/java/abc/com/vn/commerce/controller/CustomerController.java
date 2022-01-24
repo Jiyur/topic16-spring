@@ -16,22 +16,26 @@ public class CustomerController {
     @Autowired
     CustomerService customerDAO;
 
-    @GetMapping(value = "/save")
-    public String saveCustomer(Model model){
-        Customer customer=new Customer();
-        customer.setEmail("vcatanh@gmail.com");
-        try{
-            customerDAO.saveCustomer(customer);
-
-        }
-        catch (Exception e){
-            if (e.toString().contains("email_unique")){
-                model.addAttribute("errorMessage","Email taken");
-            }
-            else{
-                model.addAttribute("errorMessage","Error !");
-            }
-        }
+//    @GetMapping(value = "/save")
+//    public String saveCustomer(Model model){
+//        Customer customer=new Customer();
+//        customer.setEmail("vcatanh@gmail.com");
+//        try{
+//            customerDAO.saveCustomer(customer);
+//
+//        }
+//        catch (Exception e){
+//            if (e.toString().contains("email_unique")){
+//                model.addAttribute("errorMessage","Email taken");
+//            }
+//            else{
+//                model.addAttribute("errorMessage","Error !");
+//            }
+//        }
+//        return "index";
+//    }
+    @GetMapping(value = {"/","/home"})
+    public String home(){
         return "index";
     }
 }

@@ -17,7 +17,7 @@ import java.io.Serializable;
 public class OrderDetail implements Serializable {
     @Id
     @Column(name="order_detail_id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Integer id;
 
     @ManyToOne
