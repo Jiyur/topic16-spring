@@ -31,5 +31,11 @@ public class Product implements Serializable {
     @Column
     private String product_description;
 
+    @ManyToOne
+    @JoinColumn(name = "catalog_id")
+    private Catalog catalog;
+
+
+
 
 }

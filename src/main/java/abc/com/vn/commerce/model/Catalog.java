@@ -17,6 +17,7 @@ import java.io.Serializable;
 public class Catalog implements Serializable {
     @Id
     @Column(name = "catalog_id")
+
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private int catalog_id;
 
