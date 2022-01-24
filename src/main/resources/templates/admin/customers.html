@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
     <head>
         <meta charset="utf-8">
         <title>Customers | Hyper - Responsive Bootstrap 5 Admin Dashboard</title>
@@ -7,17 +7,17 @@
         <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description">
         <meta content="Coderthemes" name="author">
         <!-- App favicon -->
-        <link rel="shortcut icon" href="../../static/admin/assets/images/favicon.ico">
+        <link rel="shortcut icon" th:href="@{/admin/assets/images/favicon.ico}">
 
         <!-- third party css -->
-        <link href="../../static/admin/assets/css/vendor/dataTables.bootstrap5.css" rel="stylesheet" type="text/css">
-        <link href="../../static/admin/assets/css/vendor/responsive.bootstrap5.css" rel="stylesheet" type="text/css">
+        <link th:href="@{/admin/css/vendor/dataTables.bootstrap5.css}" rel="stylesheet" type="text/css">
+        <link th:href="@{/admin/css/vendor/responsive.bootstrap5.css}" rel="stylesheet" type="text/css">
         <!-- third party css end -->
 
         <!-- App css -->
-        <link href="../../static/admin/assets/css/icons.min.css" rel="stylesheet" type="text/css">
-        <link href="../../static/admin/assets/css/app.min.css" rel="stylesheet" type="text/css" id="light-style">
-        <link href="../../static/admin/assets/css/app-dark.min.css" rel="stylesheet" type="text/css" id="dark-style">
+        <link th:href="@{/admin/css/icons.min.css}" rel="stylesheet" type="text/css">
+        <link th:href="@{/admin/css/app.min.css}" rel="stylesheet" type="text/css" id="light-style">
+        <link th:href="@{/admin/css/app-dark.min.css}" rel="stylesheet" type="text/css" id="dark-style">
 
     </head>
 
@@ -30,20 +30,20 @@
                 <!-- LOGO -->
                 <a href="../customer/index.html" class="logo text-center logo-light">
                     <span class="logo-lg">
-                        <img src="../../static/admin/assets/images/logo.png" alt="" height="16">
+                        <img src="../../static/admin/images/logo.png" alt="" height="16">
                     </span>
                     <span class="logo-sm">
-                        <img src="../../static/admin/assets/images/logo_sm.png" alt="" height="16">
+                        <img src="../../static/admin/images/logo_sm.png" alt="" height="16">
                     </span>
                 </a>
 
                 <!-- LOGO -->
                 <a href="../customer/index.html" class="logo text-center logo-dark">
                     <span class="logo-lg">
-                        <img src="../../static/admin/assets/images/logo-dark.png" alt="" height="16">
+                        <img th:src="@{/admin/images/logo-dark.png}" alt="" height="16">
                     </span>
                     <span class="logo-sm">
-                        <img src="../../static/admin/assets/images/logo_sm_dark.png" alt="" height="16">
+                        <img th:src="@{/admin/images/logo_sm_dark.png}" alt="" height="16">
                     </span>
                 </a>
     
@@ -115,7 +115,7 @@
                                         <a href="apps-ecommerce-orders-details.html">Order Details</a>
                                     </li>
                                     <li>
-                                        <a href="apps-ecommerce-customers.html">Customers</a>
+                                        <a href="customers.html">Customers</a>
                                     </li>
                                     <li>
                                         <a href="apps-ecommerce-shopping-cart.html">Shopping Cart</a>
@@ -679,7 +679,7 @@
                         <a href="javascript: void(0);" class="float-end close-btn text-white">
                             <i class="mdi mdi-close"></i>
                         </a>
-                        <img src="../../static/admin/assets/images/help-icon.svg" height="90" alt="Helper Icon Image">
+                        <img src="../../static/admin/images/help-icon.svg" height="90" alt="Helper Icon Image">
                         <h5 class="mt-3">Unlimited Access</h5>
                         <p class="mb-3">Upgrade to plan to get access to unlimited reports</p>
                         <a href="javascript: void(0);" class="btn btn-outline-light btn-sm">Upgrade</a>
@@ -716,29 +716,29 @@
                             </li>
                             <li class="dropdown notification-list topbar-dropdown">
                                 <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                                    <img src="../../static/admin/assets/images/flags/us.jpg" alt="user-image" class="me-0 me-sm-1" height="12">
+                                    <img th:src="@{/admin/images/flags/us.jpg}" alt="user-image" class="me-0 me-sm-1" height="12">
                                     <span class="align-middle d-none d-sm-inline-block">English</span> <i class="mdi mdi-chevron-down d-none d-sm-inline-block align-middle"></i>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated topbar-dropdown-menu">
 
                                     <!-- item-->
                                     <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                        <img src="../../static/admin/assets/images/flags/germany.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">German</span>
+                                        <img src="../../static/admin/images/flags/germany.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">German</span>
                                     </a>
 
                                     <!-- item-->
                                     <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                        <img src="../../static/admin/assets/images/flags/italy.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Italian</span>
+                                        <img src="../../static/admin/images/flags/italy.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Italian</span>
                                     </a>
                 
                                     <!-- item-->
                                     <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                        <img src="../../static/admin/assets/images/flags/spain.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Spanish</span>
+                                        <img src="../../static/admin/images/flags/spain.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Spanish</span>
                                     </a>
 
                                     <!-- item-->
                                     <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                        <img src="../../static/admin/assets/images/flags/russia.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Russian</span>
+                                        <img src="../../static/admin/images/flags/russia.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Russian</span>
                                     </a>
 
                                 </div>
@@ -786,7 +786,7 @@
                                         <!-- item-->
                                         <a href="javascript:void(0);" class="dropdown-item notify-item">
                                             <div class="notify-icon">
-                                                <img src="../../static/admin/assets/images/users/avatar-2.jpg" class="img-fluid rounded-circle" alt=""> </div>
+                                                <img th:src="@{/admin/images/users/avatar-2.jpg}" class="img-fluid rounded-circle" alt=""> </div>
                                             <p class="notify-details">Cristina Pride</p>
                                             <p class="text-muted mb-0 user-msg">
                                                 <small>Hi, How are you? What about our next meeting</small>
@@ -806,7 +806,7 @@
                                         <!-- item-->
                                         <a href="javascript:void(0);" class="dropdown-item notify-item">
                                             <div class="notify-icon">
-                                                <img src="../../static/admin/assets/images/users/avatar-4.jpg" class="img-fluid rounded-circle" alt=""> </div>
+                                                <img th:src="@{/admin/images/users/avatar-4.jpg}" class="img-fluid rounded-circle" alt=""> </div>
                                             <p class="notify-details">Karen Robinson</p>
                                             <p class="text-muted mb-0 user-msg">
                                                 <small>Wow ! this admin looks good and awesome design</small>
@@ -843,19 +843,19 @@
                                         <div class="row g-0">
                                             <div class="col">
                                                 <a class="dropdown-icon-item" href="#">
-                                                    <img src="../../static/admin/assets/images/brands/slack.png" alt="slack">
+                                                    <img src="../../static/admin/images/brands/slack.png" alt="slack">
                                                     <span>Slack</span>
                                                 </a>
                                             </div>
                                             <div class="col">
                                                 <a class="dropdown-icon-item" href="#">
-                                                    <img src="../../static/admin/assets/images/brands/github.png" alt="Github">
+                                                    <img src="../../static/admin/images/brands/github.png" alt="Github">
                                                     <span>GitHub</span>
                                                 </a>
                                             </div>
                                             <div class="col">
                                                 <a class="dropdown-icon-item" href="#">
-                                                    <img src="../../static/admin/assets/images/brands/dribbble.png" alt="dribbble">
+                                                    <img src="../../static/admin/images/brands/dribbble.png" alt="dribbble">
                                                     <span>Dribbble</span>
                                                 </a>
                                             </div>
@@ -864,19 +864,19 @@
                                         <div class="row g-0">
                                             <div class="col">
                                                 <a class="dropdown-icon-item" href="#">
-                                                    <img src="../../static/admin/assets/images/brands/bitbucket.png" alt="bitbucket">
+                                                    <img src="../../static/admin/images/brands/bitbucket.png" alt="bitbucket">
                                                     <span>Bitbucket</span>
                                                 </a>
                                             </div>
                                             <div class="col">
                                                 <a class="dropdown-icon-item" href="#">
-                                                    <img src="../../static/admin/assets/images/brands/dropbox.png" alt="dropbox">
+                                                    <img src="../../static/admin/images/brands/dropbox.png" alt="dropbox">
                                                     <span>Dropbox</span>
                                                 </a>
                                             </div>
                                             <div class="col">
                                                 <a class="dropdown-icon-item" href="#">
-                                                    <img src="../../static/admin/assets/images/brands/g-suite.png" alt="G Suite">
+                                                    <img src="../../static/admin/images/brands/g-suite.png" alt="G Suite">
                                                     <span>G Suite</span>
                                                 </a>
                                             </div>
@@ -895,7 +895,7 @@
                             <li class="dropdown notification-list">
                                 <a class="nav-link dropdown-toggle nav-user arrow-none me-0" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
                                     <span class="account-user-avatar"> 
-                                        <img src="../../static/admin/assets/images/users/avatar-1.jpg" alt="user-image" class="rounded-circle">
+                                        <img th:src="@{/admin/images/users/avatar-1.jpg}" alt="user-image" class="rounded-circle">
                                     </span>
                                     <span>
                                         <span class="account-user-name">Soeng Souy</span>
@@ -986,7 +986,7 @@
                                     <!-- item-->
                                     <a href="javascript:void(0);" class="dropdown-item notify-item">
                                         <div class="d-flex">
-                                            <img class="d-flex me-2 rounded-circle" src="../../static/admin/assets/images/users/avatar-2.jpg" alt="Generic placeholder image" height="32">
+                                            <img class="d-flex me-2 rounded-circle" src="../../static/admin/images/users/avatar-2.jpg" alt="Generic placeholder image" height="32">
                                             <div class="w-100">
                                                 <h5 class="m-0 font-14">Erwin Brown</h5>
                                                 <span class="font-12 mb-0">UI Designer</span>
@@ -997,7 +997,7 @@
                                     <!-- item-->
                                     <a href="javascript:void(0);" class="dropdown-item notify-item">
                                         <div class="d-flex">
-                                            <img class="d-flex me-2 rounded-circle" src="../../static/admin/assets/images/users/avatar-5.jpg" alt="Generic placeholder image" height="32">
+                                            <img class="d-flex me-2 rounded-circle" src="../../static/admin/images/users/avatar-5.jpg" alt="Generic placeholder image" height="32">
                                             <div class="w-100">
                                                 <h5 class="m-0 font-14">Jacob Deo</h5>
                                                 <span class="font-12 mb-0">Developer</span>
@@ -1060,393 +1060,40 @@
                                                         <th>Customer</th>
                                                         <th>Phone</th>
                                                         <th>Email</th>
-                                                        <th>Location</th>
-                                                        <th>Create Date</th>
+                                                        <th>Address</th>
+                                                        <th>Gender</th>
                                                         <th>Status</th>
                                                         <th style="width: 75px;">Action</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    <tr>
+                                                    <tr th:each="customer : ${listCustomer}">
                                                         <td>
                                                             <div class="form-check">
-                                                                <input type="checkbox" class="form-check-input" id="customCheck2">
-                                                                <label class="form-check-label" for="customCheck2">&nbsp;</label>
-                                                            </div>
-                                                        </td>
-                                                        <td class="table-user">
-                                                            <img src="../../static/admin/assets/images/users/avatar-4.jpg" alt="table-user" class="me-2 rounded-circle">
-                                                            <a href="javascript:void(0);" class="text-body fw-semibold">Paul J. Friend</a>
-                                                        </td>
-                                                        <td>
-                                                            937-330-1634
-                                                        </td>
-                                                        <td>
-                                                            pauljfrnd@jourrapide.com
-                                                        </td>
-                                                        <td>
-                                                            New York
-                                                        </td>
-                                                        <td>
-                                                            07/07/2018
-                                                        </td>
-                                                        <td>
-                                                            <span class="badge badge-success-lighten">Active</span>
-                                                        </td>
-                    
-                                                        <td>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-delete"></i></a>
-                                                        </td>
-                                                    </tr>
-                                                    
-                                                    <tr>
-                                                        <td>
-                                                            <div class="form-check">
-                                                                <input type="checkbox" class="form-check-input" id="customCheck3">
-                                                                <label class="form-check-label" for="customCheck3">&nbsp;</label>
-                                                            </div>
-                                                        </td>
-                                                        <td class="table-user">
-                                                            <img src="../../static/admin/assets/images/users/avatar-3.jpg" alt="table-user" class="me-2 rounded-circle">
-                                                            <a href="javascript:void(0);" class="text-body fw-semibold">Bryan J. Luellen</a>
-                                                        </td>
-                                                        <td>
-                                                            215-302-3376
-                                                        </td>
-                                                        <td>
-                                                            bryuellen@dayrep.com
-                                                        </td>
-                                                        <td>
-                                                            New York
-                                                        </td>
-                                                        <td>
-                                                            09/12/2018
-                                                        </td>
-                                                        <td>
-                                                            <span class="badge badge-success-lighten">Active</span>
-                                                        </td>
-                    
-                                                        <td>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-delete"></i></a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <div class="form-check">
-                                                                <input type="checkbox" class="form-check-input" id="customCheck4">
-                                                                <label class="form-check-label" for="customCheck4">&nbsp;</label>
-                                                            </div>
-                                                        </td>
-                                                        <td class="table-user">
-                                                            <img src="../../static/admin/assets/images/users/avatar-3.jpg" alt="table-user" class="me-2 rounded-circle">
-                                                            <a href="javascript:void(0);" class="text-body fw-semibold">Kathryn S. Collier</a>
-                                                        </td>
-                                                        <td>
-                                                            828-216-2190
-                                                        </td>
-                                                        <td>
-                                                            collier@jourrapide.com
-                                                        </td>
-                                                        <td>
-                                                            Canada
-                                                        </td>
-                                                        <td>
-                                                            06/30/2018
-                                                        </td>
-                                                        <td>
-                                                            <span class="badge badge-danger-lighten">Blocked</span>
-                                                        </td>
-                    
-                                                        <td>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-delete"></i></a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <div class="form-check">
-                                                                <input type="checkbox" class="form-check-input" id="customCheck5">
-                                                                <label class="form-check-label" for="customCheck5">&nbsp;</label>
-                                                            </div>
-                                                        </td>
-                                                        <td class="table-user">
-                                                            <img src="../../static/admin/assets/images/users/avatar-1.jpg" alt="table-user" class="me-2 rounded-circle">
-                                                            <a href="javascript:void(0);" class="text-body fw-semibold">Timothy Kauper</a>
-                                                        </td>
-                                                        <td>
-                                                            (216) 75 612 706
-                                                        </td>
-                                                        <td>
-                                                            thykauper@rhyta.com
-                                                        </td>
-                                                        <td>
-                                                            Denmark
-                                                        </td>
-                                                        <td>
-                                                            09/08/2018
-                                                        </td>
-                                                        <td>
-                                                            <span class="badge badge-danger-lighten">Blocked</span>
-                                                        </td>
-                    
-                                                        <td>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-delete"></i></a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <div class="form-check">
-                                                                <input type="checkbox" class="form-check-input" id="customCheck6">
-                                                                <label class="form-check-label" for="customCheck6">&nbsp;</label>
-                                                            </div>
-                                                        </td>
-                                                        <td class="table-user">
-                                                            <img src="../../static/admin/assets/images/users/avatar-5.jpg" alt="table-user" class="me-2 rounded-circle">
-                                                            <a href="javascript:void(0);" class="text-body fw-semibold">Zara Raws</a>
-                                                        </td>
-                                                        <td>
-                                                            (02) 75 150 655
-                                                        </td>
-                                                        <td>
-                                                            austin@dayrep.com
-                                                        </td>
-                                                        <td>
-                                                            Germany
-                                                        </td>
-                                                        <td>
-                                                            07/15/2018
-                                                        </td>
-                                                        <td>
-                                                            <span class="badge badge-success-lighten">Active</span>
-                                                        </td>
-                    
-                                                        <td>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-delete"></i></a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <div class="form-check">
-                                                                <input type="checkbox" class="form-check-input" id="customCheck7">
+                                                                <input type="checkbox" class="form-check-input" id="customCheck14">
                                                                 <label class="form-check-label" for="customCheck7">&nbsp;</label>
                                                             </div>
                                                         </td>
                                                         <td class="table-user">
-                                                            <img src="../../static/admin/assets/images/users/avatar-6.jpg" alt="table-user" class="me-2 rounded-circle">
-                                                            <a href="javascript:void(0);" class="text-body fw-semibold">Annette P. Kelsch</a>
+                                                            <img th:src="@{/admin/images/users/avatar-6.jpg}" alt="table-user" class="me-2 rounded-circle">
+                                                            <a href="javascript:void(0);" class="text-body fw-semibold" th:utext="${customer.fullName}">...</a>
                                                         </td>
-                                                        <td>
-                                                            (+15) 73 483 758
+                                                        <td th:utext="${customer.phone}">
+                                                            ...
                                                         </td>
-                                                        <td>
-                                                            annette@email.net
+                                                        <td th:utext="${customer.email}">
+                                                            ...
                                                         </td>
-                                                        <td>
-                                                            India
+                                                        <td th:utext="${customer.address_line}">
+                                                            ...
                                                         </td>
-                                                        <td>
-                                                            09/05/2018
-                                                        </td>
-                                                        <td>
-                                                            <span class="badge badge-success-lighten">Active</span>
-                                                        </td>
-                    
-                                                        <td>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-delete"></i></a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <div class="form-check">
-                                                                <input type="checkbox" class="form-check-input" id="customCheck8">
-                                                                <label class="form-check-label" for="customCheck8">&nbsp;</label>
-                                                            </div>
-                                                        </td>
-                                                        <td class="table-user">
-                                                            <img src="../../static/admin/assets/images/users/avatar-7.jpg" alt="table-user" class="me-2 rounded-circle">
-                                                            <a href="javascript:void(0);" class="text-body fw-semibold">Jenny C. Gero</a>
-                                                        </td>
-                                                        <td>
-                                                            078 7173 9261
-                                                        </td>
-                                                        <td>
-                                                            jennygero@teleworm.us
-                                                        </td>
-                                                        <td>
-                                                            Lesotho
-                                                        </td>
-                                                        <td>
-                                                            08/02/2018
-                                                        </td>
-                                                        <td>
-                                                            <span class="badge badge-danger-lighten">Blocked</span>
-                                                        </td>
-                    
-                                                        <td>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-delete"></i></a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <div class="form-check">
-                                                                <input type="checkbox" class="form-check-input" id="customCheck9">
-                                                                <label class="form-check-label" for="customCheck9">&nbsp;</label>
-                                                            </div>
-                                                        </td>
-                                                        <td class="table-user">
-                                                            <img src="../../static/admin/assets/images/users/avatar-8.jpg" alt="table-user" class="me-2 rounded-circle">
-                                                            <a href="javascript:void(0);" class="text-body fw-semibold">Edward Roseby</a>
-                                                        </td>
-                                                        <td>
-                                                            078 6013 3854
-                                                        </td>
-                                                        <td>
-                                                            edwardR@armyspy.com
-                                                        </td>
-                                                        <td>
-                                                            Monaco
-                                                        </td>
-                                                        <td>
-                                                            08/23/2018
+                                                        <td th:utext="${customer.gender}">
+                                                            ...
                                                         </td>
                                                         <td>
                                                             <span class="badge badge-success-lighten">Active</span>
                                                         </td>
-                    
-                                                        <td>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-delete"></i></a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <div class="form-check">
-                                                                <input type="checkbox" class="form-check-input" id="customCheck10">
-                                                                <label class="form-check-label" for="customCheck10">&nbsp;</label>
-                                                            </div>
-                                                        </td>
-                                                        <td class="table-user">
-                                                            <img src="../../static/admin/assets/images/users/avatar-9.jpg" alt="table-user" class="me-2 rounded-circle">
-                                                            <a href="javascript:void(0);" class="text-body fw-semibold">Anna Ciantar</a>
-                                                        </td>
-                                                        <td>
-                                                            (216) 76 298 896
-                                                        </td>
-                                                        <td>
-                                                            annac@hotmai.us
-                                                        </td>
-                                                        <td>
-                                                            Philippines
-                                                        </td>
-                                                        <td>
-                                                            05/06/2018
-                                                        </td>
-                                                        <td>
-                                                            <span class="badge badge-success-lighten">Active</span>
-                                                        </td>
-                    
-                                                        <td>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-delete"></i></a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <div class="form-check">
-                                                                <input type="checkbox" class="form-check-input" id="customCheck11">
-                                                                <label class="form-check-label" for="customCheck11">&nbsp;</label>
-                                                            </div>
-                                                        </td>
-                                                        <td class="table-user">
-                                                            <img src="../../static/admin/assets/images/users/avatar-10.jpg" alt="table-user" class="me-2 rounded-circle">
-                                                            <a href="javascript:void(0);" class="text-body fw-semibold">Dean Smithies</a>
-                                                        </td>
-                                                        <td>
-                                                            077 6157 4248
-                                                        </td>
-                                                        <td>
-                                                            deanes@dayrep.com
-                                                        </td>
-                                                        <td>
-                                                            Singapore
-                                                        </td>
-                                                        <td>
-                                                            04/09/2018
-                                                        </td>
-                                                        <td>
-                                                            <span class="badge badge-success-lighten">Active</span>
-                                                        </td>
-                    
-                                                        <td>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-delete"></i></a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <div class="form-check">
-                                                                <input type="checkbox" class="form-check-input" id="customCheck12">
-                                                                <label class="form-check-label" for="customCheck12">&nbsp;</label>
-                                                            </div>
-                                                        </td>
-                                                        <td class="table-user">
-                                                            <img src="../../static/admin/assets/images/users/avatar-1.jpg" alt="table-user" class="me-2 rounded-circle">
-                                                            <a href="javascript:void(0);" class="text-body fw-semibold">Labeeb Ghali</a>
-                                                        </td>
-                                                        <td>
-                                                            050 414 8778
-                                                        </td>
-                                                        <td>
-                                                            labebswad@teleworm.us
-                                                        </td>
-                                                        <td>
-                                                            United Kingdom
-                                                        </td>
-                                                        <td>
-                                                            06/19/2018
-                                                        </td>
-                                                        <td>
-                                                            <span class="badge badge-success-lighten">Active</span>
-                                                        </td>
-                    
-                                                        <td>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-delete"></i></a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <div class="form-check">
-                                                                <input type="checkbox" class="form-check-input" id="customCheck13">
-                                                                <label class="form-check-label" for="customCheck13">&nbsp;</label>
-                                                            </div>
-                                                        </td>
-                                                        <td class="table-user">
-                                                            <img src="../../static/admin/assets/images/users/avatar-2.jpg" alt="table-user" class="me-2 rounded-circle">
-                                                            <a href="javascript:void(0);" class="text-body fw-semibold">Rory Seekamp</a>
-                                                        </td>
-                                                        <td>
-                                                            078 5054 8877
-                                                        </td>
-                                                        <td>
-                                                            roryamp@dayrep.com
-                                                        </td>
-                                                        <td>
-                                                            United States
-                                                        </td>
-                                                        <td>
-                                                            03/24/2018
-                                                        </td>
-                                                        <td>
-                                                            <span class="badge badge-danger-lighten">Blocked</span>
-                                                        </td>
-                    
+
                                                         <td>
                                                             <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
                                                             <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-delete"></i></a>
@@ -1589,19 +1236,19 @@
 
 
         <!-- bundle -->
-        <script src="../../static/admin/assets/js/vendor.min.js"></script>
-        <script src="../../static/admin/assets/js/app.min.js"></script>
+        <script th:src="@{/admin/js/vendor.min.js}"></script>
+        <script th:src="@{/admin/js/app.min.js}"></script>
 
         <!-- third party js -->
-        <script src="../../static/admin/assets/js/vendor/jquery.dataTables.min.js"></script>
-        <script src="../../static/admin/assets/js/vendor/dataTables.bootstrap5.js"></script>
-        <script src="../../static/admin/assets/js/vendor/dataTables.responsive.min.js"></script>
-        <script src="../../static/admin/assets/js/vendor/responsive.bootstrap5.min.js"></script>
-        <script src="../../static/admin/assets/js/vendor/dataTables.checkboxes.min.js"></script>
+        <script th:src="@{/admin/js/vendor/jquery.dataTables.min.js}"></script>
+        <script th:src="@{/admin/js/vendor/dataTables.bootstrap5.js}"></script>
+        <script th:src="@{/admin/js/vendor/dataTables.responsive.min.js}"></script>
+        <script th:src="@{/admin/js/vendor/responsive.bootstrap5.min.js}"></script>
+        <script th:src="@{/admin/js/vendor/dataTables.checkboxes.min.js}"></script>
         <!-- third party js ends -->
 
         <!-- demo app -->
-        <script src="../../static/admin/assets/js/pages/demo.customers.js"></script>
+        <script th:src="@{/admin/js/pages/demo.customers.js}"></script>
         <!-- end demo js-->
 
     </body>

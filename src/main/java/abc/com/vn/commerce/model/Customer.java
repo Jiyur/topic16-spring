@@ -39,10 +39,10 @@ public class Customer {
     private String password;
 
     @Column
-    private String address_line_1;
+    private String phone;
 
     @Column
-    private String address_line_2;
+    private String address_line;
 
     @Column
     private String role;
