@@ -12,6 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 @Service
 @Transactional
@@ -26,11 +27,11 @@ public class CustomerService{
         return repo.findAll();
 
     }
-    public Customer getCustomerById(Long id) {
+    public Customer getCustomerById(UUID id) {
         return repo.findById(id).get();
     }
 
-    public void delete(Long id) {
+    public void delete(UUID id) {
         repo.deleteById(id);
     }
     public Optional<Customer> emailCheck(String email) {return repo.findCustomerByEmail(email);};

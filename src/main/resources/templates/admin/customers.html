@@ -1036,8 +1036,63 @@
                                     <div class="card-body">
                                         <div class="row mb-2">
                                             <div class="col-sm-4">
-                                                <a href="javascript:void(0);" class="btn btn-danger mb-2"><i class="mdi mdi-plus-circle me-2"></i> Add Customers</a>
-                                            </div>
+                                                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#signup-modal">Add Customer</button>
+<!--                                                <div th:if="${errorMessage}" th:utext="${errorMessage}" class="alert alert-danger alert-dismissible bg-danger text-white border-0 fade show" role="alert">-->
+<!--                                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>-->
+<!--                                                    <strong>Error - </strong> <strong ></strong>-->
+<!--                                                </div>-->
+                                                <div id="signup-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+                                                    <div class="modal-dialog">
+                                                        <div class="modal-content">
+
+                                                            <div class="modal-body">
+                                                                <div class="text-center mt-2 mb-4">
+                                                                    <a href="index.html" class="text-success">
+                                                                        <span><img th:src="@{/admin/images/logo-dark.png}" alt="" height="18"></span>
+                                                                    </a>
+                                                                </div>
+
+                                                                <form class="ps-3 pe-3" th:action="@{addCustomer}"
+                                                                     th:object="${customerAdd}"
+                                                                     th:method="POST">
+
+                                                                    <div class="mb-3">
+                                                                        <label for="username" class="form-label">Full Name</label>
+                                                                        <input class="form-control" type="text" id="username" required="" placeholder="Họ và tên" th:field="*{fullName}">
+                                                                    </div>
+
+                                                                    <div class="mb-3">
+                                                                        <label for="email-address" class="form-label">Email address</label>
+                                                                        <input class="form-control" type="email" id="email-address" required="" placeholder="email@gmail.com" th:field="*{email}">
+                                                                    </div>
+                                                                    <div class="mb-3">
+                                                                        <label for="phone" class="form-label">Phone number</label>
+                                                                        <input class="form-control" type="text" id="phone" required="" placeholder="0894093393" th:field="*{phone}">
+                                                                    </div>
+                                                                    <div class="mb-3">
+                                                                        <label for="address" class="form-label">Address Line</label>
+                                                                        <input class="form-control" type="text" id="address" required="" placeholder="TP.HCM" th:field="*{address_line}">
+                                                                    </div>
+                                                                    <div class="mb-3">
+                                                                        <label for="example-select" class="form-label">Gender</label>
+                                                                        <select  th:field="*{gender}" class="form-select" id="example-select">
+                                                                            <option  th:value="'Male'" th:text="Male"></option>
+                                                                            <option  th:value="'Female'" th:text="Female"></option>
+                                                                        </select>
+                                                                    </div>
+
+
+
+                                                                    <div class="mb-3 text-center">
+                                                                        <button class="btn btn-success" type="submit">Add Customer</button>
+                                                                    </div>
+
+                                                                </form>
+
+                                                            </div>
+                                                        </div><!-- /.modal-content -->
+                                                    </div><!-- /.modal-dialog -->
+                                                </div><!-- /.modal -->                                             </div>
                                             <div class="col-sm-8">
                                                 <div class="text-sm-end">
                                                     <button type="button" class="btn btn-success mb-2 me-1"><i class="mdi mdi-cog"></i></button>
@@ -1096,7 +1151,7 @@
 
                                                         <td>
                                                             <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
-                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-delete"></i></a>
+                                                            <a th:href="@{delete/{id}(id=${customer.id})}" class="action-icon"> <i class="mdi mdi-delete"></i></a>
                                                         </td>
                                                     </tr>
                                                 </tbody>
