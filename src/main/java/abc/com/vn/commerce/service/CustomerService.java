@@ -33,8 +33,13 @@ public class CustomerService{
 
     public void delete(UUID id) {
         repo.deleteById(id);
+
     }
     public Optional<Customer> emailCheck(String email) {return repo.findCustomerByEmail(email);};
+    public void update(Customer customer){
+        repo.updateCustomer(customer.getFullName(),customer.getGender(),customer.getAddress_line(),customer.getPhone(),customer.getEmail());
+    }
+
 
 
 }
