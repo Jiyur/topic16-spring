@@ -21,10 +21,11 @@ public class CustomerController {
     public String saveCustomer(Model model){
         Customer customer=new Customer();
         customer.setEmail("vcatanh@gmail.com");
-        customer.setFullName("Trần quang khánh");
-        customer.setGender("Male");
-        customer.setPhone("012345678");
-        customer.setAddress_line("Thủ Đức");
+//        customer.setEmail("vcatanh@gmail.com");
+//        customer.setFullName("Trần quang khánh");
+//        customer.setGender("Male");
+//        customer.setPhone("012345678");
+//        customer.setAddress_line("Thủ Đức");
         try{
             customerDAO.saveCustomer(customer);
 
