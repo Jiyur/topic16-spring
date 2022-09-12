@@ -37,7 +37,12 @@ public class CustomerService{
     }
     public Optional<Customer> emailCheck(String email) {return repo.findCustomerByEmail(email);};
     public void update(Customer customer){
-        repo.updateCustomer(customer.getFullName(),customer.getGender(),customer.getAddress_line(),customer.getPhone(),customer.getEmail());
+        repo.updateCustomer(
+                customer.getFullName(),
+                customer.getGender(),
+                customer.getAddress_line(),
+                customer.getPhone(),
+                customer.getEmail());
     }
 
 
