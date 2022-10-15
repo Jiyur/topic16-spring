@@ -38,10 +38,10 @@ public class CustomerController {
                 model.addAttribute("errorMessage","Error !");
             }
         }
-        return "/customer/index";
+        return "customer/home";
     }
     @GetMapping(value = {"/","/home"})
     public String home(){
-        return "/customer/index";
+        return "customer/home";
     }
 }
