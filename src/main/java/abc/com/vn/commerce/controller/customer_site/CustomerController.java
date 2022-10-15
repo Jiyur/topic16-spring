@@ -17,29 +17,7 @@ public class CustomerController {
     CustomerService customerDAO;
 
 
-    @GetMapping(value = "/save")
-    public String saveCustomer(Model model){
-        Customer customer=new Customer();
-        customer.setEmail("vcatanh@gmail.com");
-//        customer.setEmail("vcatanh@gmail.com");
-//        customer.setFullName("Trần quang khánh");
-//        customer.setGender("Male");
-//        customer.setPhone("012345678");
-//        customer.setAddress_line("Thủ Đức");
-        try{
-            customerDAO.saveCustomer(customer);
 
-        }
-        catch (Exception e){
-            if (e.toString().contains("email_unique")){
-                model.addAttribute("errorMessage","Email taken");
-            }
-            else{
-                model.addAttribute("errorMessage","Error !");
-            }
-        }
-        return "customer/home";
-    }
     @GetMapping(value = {"/","/home"})
     public String home(){
         return "customer/home";
