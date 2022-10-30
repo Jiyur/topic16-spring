@@ -14,22 +14,19 @@ import java.util.UUID;
 public class Product implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int product_id;
+    private int id;
 
     @Column
-    private String product_name;
+    private String productName;
 
     @Column
-    private double product_price;
+    private double productPrice;
+
 
     @Column
-    private String product_color;
+    private String productImage;
 
-    @Column
-    private String product_size;
 
-    @Column
-    private String product_description;
 
     @ManyToOne
     @JoinColumn(name = "catalog_id")

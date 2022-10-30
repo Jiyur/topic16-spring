@@ -8,6 +8,7 @@ import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 @Entity
 @NoArgsConstructor
@@ -17,12 +18,14 @@ import java.io.Serializable;
 public class Catalog implements Serializable {
     @Id
     @Column(name = "catalog_id")
-
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private int catalog_id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int catalogId;
 
     @Type(type="text")
-    private String catalog_name;
+    private String catalogName;
+
+    @OneToMany(mappedBy = "catalog")
+    private List<Product> product;
 
 
 
