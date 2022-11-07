@@ -48,8 +48,7 @@ public class ProductManager {
             }
             catch(Exception e) {
                 model.addAttribute("errorMessage",e.getMessage());
-
-                return "redirect:/admin/products/";
+                System.out.println(e.getMessage());
 
             }
         }
