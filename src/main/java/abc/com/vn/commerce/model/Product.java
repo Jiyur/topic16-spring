@@ -13,7 +13,7 @@ import java.util.UUID;
 @Entity(name = "product")
 public class Product implements Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
     @Column
