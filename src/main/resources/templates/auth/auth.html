@@ -100,7 +100,7 @@
                             <i class="fa fa-lock"></i>
                             <span class="shop-menu-ttl">Registration</span>
                         </a>
-                        <a th:href="@{/redirect-login}">
+                        <a href="auth.html">
                             <span class="shop-menu-ttl">Login</span>
                         </a>
                     </li>
@@ -655,68 +655,67 @@
 
 <!-- Main Content - start -->
 <main>
-    <section class="container">
+    <section class="container stylization maincont">
 
 
-        <!-- Slider -->
-
-
-        <!-- Popular Products -->
-        <div class="fr-pop-wrap">
-
-            <h3 class="component-ttl"><span>Popular products</span></h3>
-
-            <ul class="fr-pop-tabs sections-show">
-                <li><a data-frpoptab-num="1" data-frpoptab="#frpoptab-tab-1" href="#" class="active">All Categories</a></li>
-                <li><a data-frpoptab-num="2" data-frpoptab="#frpoptab-tab-2" href="#">Áo</a></li>
-                <li><a data-frpoptab-num="3" data-frpoptab="#frpoptab-tab-3" href="#">Quần</a></li>
-
-            </ul>
-
-            <div class="fr-pop-tab-cont">
-
-                <p data-frpoptab-num="1" class="fr-pop-tab-mob active" data-frpoptab="#frpoptab-tab-1">All Categories</p>
-                <div class="flexslider prod-items fr-pop-tab" id="frpoptab-tab-1">
-
-                    <ul class="slides">
-
-                        <li class="prod-i" th:each="product : ${listProduct}">
-                            <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img th:src="@{${product.getProductImage()}}" alt="Aspernatur excepturi rem"><!-- NO SPACE --></a>
-                                <p class="prod-i-info">
-                                    <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
-                                </p>
-                                <p class="prod-i-addwrap">
-                                    <a href="#" class="prod-i-add">Go to detail</a>
-                                </p>
-                            </div>
-                            <h3>
-                                <a th:utext="${product.getProductName()}"></a>
-                            </h3>
-                            <p class="prod-i-price">
-                                <b th:utext="${product.productPrice}"></b>
-                            </p>
-
-                        </li>
-
-
-
-
-                    </ul>
-
-                </div>
+        <ul class="b-crumbs">
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+            <li>
+                <span>Registration / Login</span>
+            </li>
+        </ul>
+        <h1 class="main-ttl"><span>Registration / Login</span></h1>
+        <div class="auth-wrap">
+            <div class="auth-col">
+                <h2>Login</h2>
+                <form method="post" class="login" th:action="login" th:object="${loginReq}" th:method="POST">
+                    <p>
+                        <label for="username">E-mail <span class="required">*</span></label><input type="text" id="username" th:field="*{username}">
+                    </p>
+                    <p>
+                        <label for="password">Password <span class="required">*</span></label><input type="password" id="password" th:field="*{password}">
+                    </p>
+                    <p class="auth-submit">
+                        <input type="submit" value="Login">
+                        <input type="checkbox" id="rememberme" value="forever">
+                        <label for="rememberme">Remember me</label>
+                    </p>
+                    <p class="auth-lost_password">
+                        <a href="#">Lost your password?</a>
+                    </p>
+                </form>
             </div>
-
+            <div class="auth-col">
+                <h2>Register</h2>
+                <form method="post" class="register" th:action="register" th:object="${registerReq}" th:method="POST">
+                    <p>
+                        <label for="reg_email">Email <span class="required">*</span></label><input type="email" id="reg_email" th:field="*{username}">
+                    </p>
+                    <p>
+                        <label for="reg_password">Password <span class="required">*</span></label><input type="password" id="reg_password" th:field="*{password}">
+                    </p>
+                    <p class="auth-submit">
+                        <input type="submit" value="Register">
+                    </p>
+                </form>
+            </div>
         </div>
+
+
 
     </section>
 </main>
 <!-- Main Content - end -->
 
 
+
 <!-- Footer - start -->
 <footer class="footer-wrap">
-    
+
 
     <div class="container f-menu-list">
         <div class="row">
