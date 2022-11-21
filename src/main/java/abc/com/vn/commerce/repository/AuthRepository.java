@@ -5,4 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface AuthRepository extends JpaRepository<AuthModel, Integer> {
     AuthModel findByUsernameAndPassword(String username, String password);
+    AuthModel findByUsername(String username);
 }

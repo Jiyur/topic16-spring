@@ -10,6 +10,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+import javax.servlet.http.HttpSession;
 
 @Controller
 @RequiredArgsConstructor
@@ -42,14 +45,19 @@ public class AuthController {
     }
 
     @PostMapping("/register")
-    public String register(Model model, @ModelAttribute("registerReq")RegisterReq registerReq) {
-        AuthModel authModel = new AuthModel();
-        authModel.setRole("User");
-        authModel.setUsername(registerReq.getUsername());
-        authModel.setPassword(registerReq.getPassword());
+    public String register(Model model, @ModelAttribute("registerReq")RegisterReq registerReq, HttpSession session) {
+        AuthModel authModel = authService.getAuthByUsername(registerReq.getUsername());
+        if (authModel == null) {
+            authModel = new AuthModel();
+            authModel.setRole("User");
+            authModel.setUsername(registerReq.getUsername());
+            authModel.setPassword(registerReq.getPassword());
+            authService.createAuth(authModel);
+            return "redirect:/home";
+        }
+        session.setAttribute("status", "username existed");
 
-        authService.createAuth(authModel);
-        return "redirect:/home";
+        return "redirect:/redirect-login";
     }
 
 

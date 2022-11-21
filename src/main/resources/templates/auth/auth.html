@@ -687,6 +687,14 @@
                     <p class="auth-lost_password">
                         <a href="#">Lost your password?</a>
                     </p>
+                    <input id="status" hidden th:text="${session.status}">
+                    <script>
+                       const element = document.getElementById("status")
+                        if (element.textContent) {
+                            console.log(element)
+                        }
+                       console.log(element.innerText)
+                    </script>
                 </form>
             </div>
             <div class="auth-col">

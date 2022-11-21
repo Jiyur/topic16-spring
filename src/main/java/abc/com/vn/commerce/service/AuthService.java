@@ -17,4 +17,8 @@ public class AuthService {
     public AuthModel createAuth(AuthModel authModel) {
         return authRepository.save(authModel);
     }
+
+    public AuthModel getAuthByUsername(String username) {
+        return authRepository.findByUsername(username);
+    }
 }
