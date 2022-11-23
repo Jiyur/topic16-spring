@@ -548,17 +548,17 @@
                         </ul>
                     </li>
                     <li class="menu-item-has-children">
-                        <a href="product.html">
+                        <a th:href="@{/procuct/1}">
                             Product <i class="fa fa-angle-down"></i>
                         </a>
                         <ul class="sub-menu">
                             <li>
-                                <a href="product.html">
+                                <a th:href="@{/procuct/1}">
                                     Product - Style 1 (Slider)
                                 </a>
                             </li>
                             <li>
-                                <a href="product-2.html">
+                                <a th:href="@{/procuct/1}">
                                     Product - Style 2 (Scroll)
                                 </a>
                             </li>
@@ -682,7 +682,7 @@
 
                         <li class="prod-i" th:each="product : ${listProduct}">
                             <div class="prod-i-top">
-                                <a href="product.html" class="prod-i-img"><!-- NO SPACE --><img th:src="@{${product.getProductImage()}}" alt="Aspernatur excepturi rem"><!-- NO SPACE --></a>
+                                <a th:href="@{/product/1}" class="prod-i-img"><!-- NO SPACE --><img th:src="@{${product.getProductImage()}}" alt="Aspernatur excepturi rem"><!-- NO SPACE --></a>
                                 <p class="prod-i-info">
                                     <a href="#" class="qview-btn prod-i-qview"><span>Quick View</span><i class="fa fa-search"></i></a>
                                 </p>

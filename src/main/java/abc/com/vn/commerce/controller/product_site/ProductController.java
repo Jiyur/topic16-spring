@@ -18,9 +18,9 @@ public class ProductController {
   public String getAllById(Model model, @PathVariable("id") Integer id) {
     Product product = productService.getProductById(id);
     if (product == null) {
-      return "/home";
+      return "customer/home";
     }
     model.addAttribute("product", product);
-    return "/product/" + id;
+    return "temp/product";
   }
 }
