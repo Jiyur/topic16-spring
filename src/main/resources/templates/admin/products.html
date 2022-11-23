@@ -476,9 +476,10 @@
                                                                     </a>
                                                                 </div>
 
-                                                                <form class="ps-3 pe-3" th:action="@{addProduct}"
+                                                                <form class="ps-3 pe-3" th:action="@{/admin/products/addProduct}"
                                                                       th:object="${productAdd}"
-                                                                      th:method="POST">
+                                                                      th:method="POST"
+                                                                      enctype="multipart/form-data">
 
                                                                     <div class="mb-3">
                                                                         <label for="name" class="form-label">Name</label>
@@ -491,7 +492,7 @@
                                                                     </div>
                                                                     <div class="mb-3">
                                                                         <label for="image" class="form-label">Image</label>
-                                                                        <input class="form-control" type="text" id="image" required=""
+                                                                        <input class="form-control" type="file" id="image" required=""
                                                                                th:field="*{productImage}">
                                                                     </div>
 
@@ -561,7 +562,7 @@
                                                                 <span class="text-warning mdi mdi-star"></span>
                                                             </p>
                                                         </td>
-                                                        <td th:utext="${product.getCatalog().getCatalogName()}">
+                                                        <td th:utext="${product.getCatalog()}">
                                                         </td>
 
                                                         <td th:utext="${product.getProductPrice()}">

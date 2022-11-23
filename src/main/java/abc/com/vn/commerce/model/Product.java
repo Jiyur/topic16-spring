@@ -26,11 +26,8 @@ public class Product {
     @Column
     private String productImage;
 
-
-
-    @ManyToOne
-    @JoinColumn(name = "catalog_id")
-    private Catalog catalog;
+    @Column
+    private String catalog;
 
 
 
