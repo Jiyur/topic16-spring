@@ -8,6 +8,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
+import java.util.List;
+
 @Controller
 public class ProductController {
 
@@ -17,10 +19,12 @@ public class ProductController {
   @GetMapping("/product/{id}")
   public String getAllById(Model model, @PathVariable("id") Integer id) {
     Product product = productService.getProductById(id);
+    List<Product> productList = productService.getAllProduct();
     if (product == null) {
       return "customer/home";
     }
     model.addAttribute("product", product);
+    model.addAttribute("productList", productList);
     return "temp/product";
   }
 }

@@ -39,7 +39,8 @@ public class ProductManager {
     @SneakyThrows
     @PostMapping(value = "addProduct")
     public String addCustomer(Model model, //
-                              @ModelAttribute("productAdd") ProductReq productAdd){
+                              @ModelAttribute("productAdd") ProductReq productAdd) throws Exception {
+
         String name=productAdd.getProductName();
         double price=productAdd.getProductPrice();
         MultipartFile image=productAdd.getProductImage();
