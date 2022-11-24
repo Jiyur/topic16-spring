@@ -476,7 +476,7 @@
                                                                     </a>
                                                                 </div>
 
-                                                                <form class="ps-3 pe-3" th:action="@{/admin/products/addProduct}"
+                                                                <form class="ps-3 pe-3" th:action="@{~/admin/products/addProduct}"
                                                                       th:object="${productAdd}"
                                                                       th:method="POST"
                                                                       enctype="multipart/form-data">
@@ -575,7 +575,7 @@
                                                         <td class="table-action">
                                                             <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-eye"></i></a>
                                                             <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
-                                                            <a th:href="@{delete/{id}(id=${product.id})}" class="action-icon"> <i class="mdi mdi-delete"></i></a>
+                                                            <a th:href="@{~/admin/products/delete/{id}(id=${product.id})}" class="action-icon"> <i class="mdi mdi-delete"></i></a>
                                                         </td>
                                                     </tr>
 
