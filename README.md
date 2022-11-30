@@ -26,7 +26,7 @@ Amazon CloudTrail
 ![](https://cdn.discordapp.com/attachments/1047372401803001856/1047372722612731934/image.png)
 - Bước 4: Sau khi hoàn thành cấu hình, nhấn vào nút "Create" để hoàn thành. Nhấn "Open" để chạy dịch vụ AWSCloud9 vừa tạo  <br/>
   ![](https://cdn.discordapp.com/attachments/1047372401803001856/1047373073151696968/image.png)
-- Kết quả:
+- Kết quả:   <br/>
 ![](https://cdn.discordapp.com/attachments/1047372401803001856/1047373633376493588/image.png)
 ## Hướng dẫn chạy ứng dụng minh hoạ trên AWS Cloud9
 - Bước 1: Cài đặt thư viện maven để đóng gói ứng dụng bằng cách lệnh sau
@@ -51,6 +51,7 @@ Amazon CloudTrail
     Trong đó: public_host chính là pulic ipv4 hoặc public DNS của máy ảo EC2 
     dùng để chạy dịch vụ AWSCloud9
 ```
-Kết quả: Ứng dụng đã chạy thành công 
+Kết quả: Ứng dụng đã chạy thành công   <br/>
+
 Lưu ý: nếu không thể truy cập ứng dụng qua URL trên, cần cấu hình thêm inbound rule cho máy ảo EC2 với giao thức TCP để có thể truy cập
 ![](https://cdn.discordapp.com/attachments/1047372401803001856/1047374686738186290/image.png)
