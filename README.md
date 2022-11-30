@@ -18,14 +18,14 @@ Amazon CloudTrail
 ```
 ## Hướng dẫn cài đặt Amazon Cloud9 
 - Bước 1: Ở AWS Console, tìm kiếm dịch vụ Cloud9 trên thanh tìm kiếm
-- Bước 2: Ở AWS Cloud9 Dashboard, nhấn vào "Create Environment"
+- Bước 2: Ở AWS Cloud9 Dashboard, nhấn vào "Create Environment" <br/> 
 ![](https://cdn.discordapp.com/attachments/1047372401803001856/1047372415753277481/image.png)
 - Bước 3: Tiến hành cấu hình cài đặt cho dịch vụ như sau
 ![](https://cdn.discordapp.com/attachments/1047372401803001856/1047372721979412550/image.png)
 ![](https://cdn.discordapp.com/attachments/1047372401803001856/1047372722298171402/image.png)
 ![](https://cdn.discordapp.com/attachments/1047372401803001856/1047372722612731934/image.png)
-- Bước 4: Sau khi hoàn thành cấu hình, nhấn vào nút "Create" để hoàn thành. Nhấn "Open" để chạy dịch vụ AWSCloud9 vừa tạo
-![](https://cdn.discordapp.com/attachments/1047372401803001856/1047373073151696968/image.png)
+- Bước 4: Sau khi hoàn thành cấu hình, nhấn vào nút "Create" để hoàn thành. Nhấn "Open" để chạy dịch vụ AWSCloud9 vừa tạo  <br/>
+  ![](https://cdn.discordapp.com/attachments/1047372401803001856/1047373073151696968/image.png)
 - Kết quả:
 ![](https://cdn.discordapp.com/attachments/1047372401803001856/1047373633376493588/image.png)
 ## Hướng dẫn chạy ứng dụng minh hoạ trên AWS Cloud9
