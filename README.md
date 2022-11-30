@@ -54,4 +54,5 @@ Amazon CloudTrail
 Kết quả: Ứng dụng đã chạy thành công   <br/>
 
 Lưu ý: nếu không thể truy cập ứng dụng qua URL trên, cần cấu hình thêm inbound rule cho máy ảo EC2 với giao thức TCP để có thể truy cập
+<br/>
 ![](https://cdn.discordapp.com/attachments/1047372401803001856/1047374686738186290/image.png)
