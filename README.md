@@ -5,7 +5,7 @@
 - Viết ứng dụng minh hoạ
 
 ## Nhóm TT 70- thành viên thực hiện:
-- Trần Quang Khánh 19110436
+- Trần Quang Khánh 19110376
 - Phan Thanh Tài 19110452
 - Bùi Văn Tính 19110478
 ## Các dịch vụ sử dụng
